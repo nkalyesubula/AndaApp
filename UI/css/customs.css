@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+body {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  width: 111px;
+  height: 32px;
+  background: #303F9F;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.34);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.34);
+  border-radius: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 18px;
+  color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  outline: none;
+}
+
+button button:focus {
+  outline: none;
+}
+
+.form {
+  position: relative;
+  width: 40%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.form h2 {
+  color: #303F9F;
+}
+
+.form .formBox {
+  border: 5px solid #303F9F;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 30px;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.form .signupLink {
+  padding-top: 20px;
+}
+
+.form .inputArea {
+  padding: 5px;
+  margin: 5px auto;
+  width: 60%;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form .inputArea label {
+  text-align: initial;
+  padding-bottom: 5px;
+  color: gray;
+}
+
+.form .inputArea input {
+  height: 50px;
+  border: none;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  font-size: 20px;
+}
+
+.form .inputArea input:focus {
+  border: 1px solid #303F9F;
+  outline: none;
+}
+
+.form .inputArea a {
+  color: #303F9F;
+}
+
+.form .option {
+  padding: 5px;
+  margin: 5px auto;
+  border: 1px solid black;
+  width: 60%;
+  font-size: 18px;
+}
+
+.form .option a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: #303F9F;
+}
+
+.form .option a img {
+  justify-items: end;
+  margin: auto;
+}
+
+.form .option a p {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  text-align: initial;
+}
+
+.form .signupLink {
+  color: gray;
+}
+
+.form .signupLink a {
+  color: #303F9F;
+  text-decoration: none;
+}
+
+@media (min-width: 1500px) {
+  .form {
+    width: 80%;
+  }
+  .form .inputArea {
+    width: 60%;
+    font-size: 30px;
+  }
+  .form .inputArea input {
+    height: 45px;
+    font-size: 18px;
+  }
+  .form .option {
+    width: 60%;
+    font-size: 30px;
+  }
+  .form .option img {
+    margin-left: 200px;
+    padding-left: 70px;
+    width: 50px;
+    height: 50px;
+  }
+  .form .option p {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    text-align: center;
+    padding-left: 80px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .form {
+    width: 70%;
+  }
+  .form .inputArea {
+    width: 60%;
+    font-size: 18px;
+  }
+  .form .inputArea input {
+    height: 45px;
+    font-size: 18px;
+  }
+  .form .option {
+    width: 60%;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .form {
+    width: 60%;
+  }
+  .form .inputArea {
+    width: 60%;
+    font-size: 15px;
+  }
+  .form .inputArea input {
+    height: 35px;
+    font-size: 16px;
+  }
+  .form .option {
+    width: 60%;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .form {
+    width: 90%;
+  }
+  .form .inputArea {
+    width: 80%;
+    font-size: 15px;
+  }
+  .form .inputArea input {
+    height: 30px;
+    font-size: 15px;
+  }
+  .form .option {
+    width: 80%;
+    font-size: 13px;
+  }
+  .form .signupLink {
+    font-size: 13px;
+  }
+}
+/*# sourceMappingURL=customs.css.map */

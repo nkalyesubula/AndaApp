@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 .main-head {
+  background: blue;
   grid-area: header;
 }
 .content {
+  background: gray;
   grid-area: content;
 }
 .main-nav {
@@ -13,6 +15,7 @@
   grid-area: sidebar;
 }
 .main-footer {
+  background: blue;
   grid-area: footer;
 }
 .wrapper {
@@ -26,12 +29,11 @@
     "content"
     "footer";
 }
-@media (min-width: 500px) {
+@media screen and (min-width: 500px) {
   .wrapper {
     grid-template-columns: 1fr 3fr;
     grid-template-areas: 
       "header  header"
-      "nav     nav"
       "sidebar content"
       "footer     footer";
   }
@@ -41,7 +43,6 @@
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas: 
       "header header  header"
-      "sidebar    content content"
       "sidebar    content content"
       "footer footer  footer"
    }
