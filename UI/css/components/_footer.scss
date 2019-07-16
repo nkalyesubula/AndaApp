@@ -1,0 +1,26 @@
+.footer{
+    @include align-items(center);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+    background: $primary-color;
+    color: $primary-color-text;
+    height: 56px;
+    box-shadow: 0 0px 11px rgba(0,0,0,0.4);
+  
+    @media (min-width: 600px) {
+      height: 72px;
+    }
+  
+    & .copyright {
+    align-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: normal;
+    
+      @media (min-width: 600px) {
+        font-size: 1.3rem;
+      }
+    }
+  }
