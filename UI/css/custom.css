@@ -1,1 +1,23 @@
-/* No CSS *//*# sourceMappingURL=custom.css.map */
+.toolbar .site-icon{
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    margin-left: 1200px;
+
+  }
+  .myButton {
+    text-decoration: none;
+    color:#ffffff;
+    text-align: right;
+    border-radius:4px;
+    background: #303F9F;
+    padding-left: 10px;
+	  padding-right: 10px;
+
+
+  }
+  a{
+    text-decoration: none;
+  }
+ 
