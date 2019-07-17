@@ -25,12 +25,17 @@ button{
 
 .form{
     position: relative;
-    width: 40%;
+    width: 50%;
     margin: 30px auto;
     text-align: center;
     h2{
         color: #303F9F;
+        font-size: 20px;
     }
+    .firstLastNames{
+        display: flex;
+    }
+    
     .formBox{
         border: 5px solid #303F9F;
         box-sizing: border-box;
@@ -40,14 +45,7 @@ button{
     .signupLink{
         padding-top: 20px;
     }
-    .inputArea{
-        padding: 5px;
-        margin: 5px auto;
-        // border: 1px solid black;
-        width: 60%;
-        font-size: 18px;
-        display: flex;
-        flex-direction: column;
+    @mixin inputPart {
         label{
             text-align: initial;
             padding-bottom: 5px;
@@ -66,6 +64,33 @@ button{
         a{
             color: #303F9F;
         }
+    }
+    .firstLastNames{
+        margin: 5px auto;
+        width: 60%;
+        font-size: 18px;
+        display: flex;
+        .signupInput{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            input{
+                width: 100%;
+            }
+        }
+        .right{
+            padding-left: 10px;
+        }
+        @include inputPart();
+    }
+    .inputArea{
+        padding: 5px;
+        margin: 5px auto;
+        width: 60%;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        @include inputPart();
     }
     .option{
       padding: 5px;
@@ -146,33 +171,54 @@ button{
         }
     }
     @media (max-width: 900px){
+        @mixin inputMediaquery-900 {
+            width: 60%;
+            font-size: 15px;
+            input{
+                height: 35px;
+                font-size: 16px;
+            }
+        }
         .form{
             width: 60%;
             .inputArea{
-                width: 60%;
-                font-size: 15px;
-                input{
-                    height: 35px;
-                    font-size: 16px;
-                }
+                @include inputMediaquery-900();
             }
             .option{
                 width: 60%;
                 font-size: 15px;
             }
+            .firstLastNames{
+               display: block;
+              @include inputMediaquery-900();
+              .right{
+                padding-left: 0px;
+            }
+            }
         }
     }
     @media (max-width: 500px){
+        @mixin inputMediaquery-500 {
+            width: 80%;
+            font-size: 15px;
+            input{
+                height: 30px;
+                font-size: 15px;
+            }
+        }
         .form{
             width: 90%;
             .inputArea{
-                width: 80%;
-                font-size: 15px;
-                input{
-                    height: 30px;
-                    font-size: 15px;
-                }
+                @include inputMediaquery-500();
             }
+            .firstLastNames{
+                display: block;
+                @include inputMediaquery-500();
+                .right{
+                    padding-left: 0px;
+                }
+             }
+           
             .option{
                 width: 80%;
                 font-size: 13px;

@@ -5,7 +5,6 @@
   grid-area: header;
 }
 .content {
-  background: gray;
   grid-area: content;
 }
 .main-nav {
