@@ -262,3 +262,14 @@ html, body {
   outline: none;
   color: #fff;
 }
+
+
+.footer {
+  -webkit-align-items: center;
+  align-items: center;
+  bottom: 0;
+  position: relative;
+}
+
+/*# sourceMappingURL=main.css.map */
+
