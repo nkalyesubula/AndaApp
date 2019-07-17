@@ -12,13 +12,44 @@
     color:#ffffff;
     text-align: right;
     border-radius:4px;
-    background: #303F9F;
+    background: #ffffff;
     padding-left: 10px;
-	  padding-right: 10px;
-
-
+	  padding-right: 10px; 
+  }
+  .myButton a{
+    text-decoration: none;
+    color: white;
+    background: blue;
+    border-radius:4px;
+    padding:6px;
+    font-size: 13px;
+    text-align: center;
+  }
+  .share{
+    text-decoration: none;
+    color: white;
+    background:#BDBDBD;
+    border-radius:4px;
+    padding:6px;
+    font-size: 13px;
+    text-align: center;
+  }
+  .author{
+    text-align:left;
+    color:#BDBDBD;
   }
   a{
     text-decoration: none;
   }
- 
+  .post-time img{
+   width:35px;
+   height: 25px;
+   border-radius:30px;
+
+ }
+ #titles{
+  text-decoration: underline
+ }
+ #icons{
+   padding:10px;
+ }
