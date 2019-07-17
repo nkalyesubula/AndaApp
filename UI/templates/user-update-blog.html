@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Editor css -->
+    <link
+      href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css"
+      rel="stylesheet"
+    />
+    <link
+      href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css"
+      rel="stylesheet"
+    />
+    <!-- Main  css resources-->
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <title>Update blog</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- main header -->
+      <header class="main-head toolbar">
+        <h1 class="site-title">Anda app</h1>
+      </header>
+
+      <!-- main sidebar area -->
+      <section class="side shadow-effect dashboard">
+        <div id="">Dashboard</div>
+        <div class="user-info">
+          <img src="../images/avatar.png" alt="" />
+          <span>
+            <p>normal user</p>
+            <p>user.anda.com</p>
+          </span>
+        </div>
+        <div class="sidebar-menu">
+          <ul>
+            <li>
+              <a href="">
+                <img src="../images/dashboard.png" alt="" />
+                <span>
+                  <p>your blogs</p>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../images/blog.png" alt="" />
+                <span>
+                  <p>new blogs</p>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../images/settings.png" alt="" />
+                <span>
+                  <p>Settings</p>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- main content area -->
+      <section class="content shadow-effect">
+        <input
+          type="text"
+          class="form-input"
+          value="My first week working at Andela"
+          id=""
+          placeholder="Title"
+          autofocus
+        />
+        <br />
+        <select class="form-select" id="">
+          <option value="1">Technology</option>
+          <option value="1">Categories</option>
+          <option value="2">Politics</option>
+          <option value="3">Health</option>
+          <option value="4">Sport</option>
+        </select>
+        <div id="summernote" class="editor">
+          <h4>
+            Success during week one is about balance: you want to make great
+            first impressions, but you shouldn’t put too much pressure on
+            yourself to get everything right. The goal is to learn about your
+            new workplace and feel out your place in that ecosystem.</br> </br> 
+            In the first week: </br> </br> 
+            1. Introduce yourself, relentlessly. Studies have shown
+            that anxiety in new situations can come in part from not feeling
+            confident in how to introduce ourselves. It’s a natural feeling —
+            when you’re new, you don’t necessarily want to call attention to
+            yourself. But in the first days of a new job, you want your
+            enthusiasm to shine through. So, find the timing that feels right
+            and give a quick, energetic introduction to the people you don’t
+            know yet.
+          </h4>
+        </div>
+        <a href=""><button class="button">Update</button></a>
+      </section>
+    </div>
+  </body>
+  <!-- Editor js resources-->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+  <script src="../js/editor.js"></script>
+</html>
