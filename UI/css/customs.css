@@ -4,7 +4,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-button {
+.btn {
   width: 111px;
   height: 32px;
   background: #303F9F;
@@ -21,7 +21,7 @@ button {
   outline: none;
 }
 
-button button:focus {
+.btn:focus {
   outline: none;
 }
 
