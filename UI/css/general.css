@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 .main-head {
   background: blue;
@@ -19,12 +19,12 @@
   grid-area: footer;
 }
 .wrapper {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   display: grid;
-  grid-gap: 20px;
-  grid-template-areas: 
+  grid-gap: 10px;
+  grid-template-areas:
     "header"
-	"sidebar"
+    "sidebar"
     "nav"
     "content"
     "footer";
@@ -32,7 +32,7 @@
 @media screen and (min-width: 500px) {
   .wrapper {
     grid-template-columns: 1fr 3fr;
-    grid-template-areas: 
+    grid-template-areas:
       "header  header"
       "sidebar content"
       "footer     footer";
@@ -41,9 +41,10 @@
 @media (min-width: 700px) {
   .wrapper {
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       "header header  header"
       "sidebar    content content"
-      "footer footer  footer"
-   }
+      "sidebar    content content"
+      "footer footer  footer";
+  }
 }
