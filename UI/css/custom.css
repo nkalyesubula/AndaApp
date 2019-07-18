@@ -226,13 +226,14 @@ a {
   font-style: normal;
 }
 button {
+  background: #303f9f;
   border-radius: 4px;
   color: white;
 }
 .readmore-btn {
   text-align: center;
 }
-.footer {
+.footer1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
