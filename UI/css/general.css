@@ -7,6 +7,14 @@
 .content {
   grid-area: content;
 }
+.make-flex {
+  display: flex;
+  margin: 1rem;
+}
+.search-area {
+  grid-area: searchbar;
+  background: white;
+}
 .main-nav {
   grid-area: nav;
 }
@@ -17,10 +25,14 @@
   background: blue;
   grid-area: footer;
 }
+.blog-content {
+  display: grid;
+  grid-gap: 5px;
+}
 .wrapper {
   font-family: "Roboto", sans-serif;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 0px;
   grid-template-areas:
     "header"
     "sidebar"
@@ -42,6 +54,7 @@
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas:
       "header header  header"
+      "sidebar searchbar searchbar"
       "sidebar    content content"
       "sidebar    content content"
       "footer footer  footer";
