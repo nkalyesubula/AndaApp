@@ -1,0 +1,233 @@
+// START OF LOGIN STYLING
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body{
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+button{
+    width: 111px;
+    height: 32px;
+    background: #303F9F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.34);
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: white;
+    -webkit-appearance: none;
+   -moz-appearance: none;
+   border: none;
+   outline: none;
+   button:focus{
+       outline: none;
+   }
+}
+
+.form{
+    position: relative;
+    width: 50%;
+    margin: 30px auto;
+    text-align: center;
+    h2{
+        color: #303F9F;
+        font-size: 20px;
+    }
+    .firstLastNames{
+        display: flex;
+    }
+    
+    .formBox{
+        border: 5px solid #303F9F;
+        box-sizing: border-box;
+        padding: 30px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    }
+    .signupLink{
+        padding-top: 20px;
+    }
+    @mixin inputPart {
+        label{
+            text-align: initial;
+            padding-bottom: 5px;
+            color: gray;
+        }
+        input{
+            height: 50px;
+            border: none;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            font-size: 20px;
+        }
+        input:focus{
+            border: 1px solid #303F9F;
+            outline: none;
+        }
+        a{
+            color: #303F9F;
+        }
+    }
+    .firstLastNames{
+        margin: 5px auto;
+        width: 60%;
+        font-size: 18px;
+        display: flex;
+        .signupInput{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            input{
+                width: 100%;
+            }
+        }
+        .right{
+            padding-left: 10px;
+        }
+        @include inputPart();
+    }
+    .inputArea{
+        padding: 5px;
+        margin: 5px auto;
+        width: 60%;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        @include inputPart();
+    }
+    .option{
+      padding: 5px;
+      margin: 5px auto;
+      border: 1px solid black;
+      width: 60%;
+      font-size: 18px;
+      
+      a{
+         display: flex;
+         text-decoration: none;
+         color: #303F9F;
+         img{
+            justify-items: end;
+            margin: auto;
+         }
+         p{
+            flex-basis: 70%;
+            justify-content: center;
+            margin: auto;
+            text-align: initial;
+         }
+        }
+      }
+      .signupLink{
+          color: gray;
+          a{
+              color: #303F9F;
+              text-decoration: none;
+              
+          }
+      }
+    }
+    @media (min-width:1500px){
+        .form{
+            width: 80%;
+            .inputArea{
+                width: 60%;
+                font-size: 30px;
+                input{
+                    height: 45px;
+                    font-size: 18px;
+                }
+            }
+            .option{
+                width: 60%;
+                font-size: 30px;
+                img{
+                    margin-left: 200px;
+                    padding-left: 70px;
+                    width: 50px;
+                    height: 50px;;
+                }
+                p{
+                    flex-basis: 30%;
+                    text-align: center;
+                    padding-left: 80px;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    @media (max-width: 1200px){
+        .form{
+            width: 70%;
+            .inputArea{
+                width: 60%;
+                font-size: 18px;
+                input{
+                    height: 45px;
+                    font-size: 18px;
+                }
+            }
+            .option{
+                width: 60%;
+                font-size: 18px;
+            }
+        }
+    }
+    @media (max-width: 900px){
+        @mixin inputMediaquery-900 {
+            width: 60%;
+            font-size: 15px;
+            input{
+                height: 35px;
+                font-size: 16px;
+            }
+        }
+        .form{
+            width: 60%;
+            .inputArea{
+                @include inputMediaquery-900();
+            }
+            .option{
+                width: 60%;
+                font-size: 15px;
+            }
+            .firstLastNames{
+               display: block;
+              @include inputMediaquery-900();
+              .right{
+                padding-left: 0px;
+            }
+            }
+        }
+    }
+    @media (max-width: 500px){
+        @mixin inputMediaquery-500 {
+            width: 80%;
+            font-size: 15px;
+            input{
+                height: 30px;
+                font-size: 15px;
+            }
+        }
+        .form{
+            width: 90%;
+            .inputArea{
+                @include inputMediaquery-500();
+            }
+            .firstLastNames{
+                display: block;
+                @include inputMediaquery-500();
+                .right{
+                    padding-left: 0px;
+                }
+             }
+           
+            .option{
+                width: 80%;
+                font-size: 13px;
+            }
+            .signupLink{
+                font-size: 13px;
+            }
+        }
+    }
+  
+
+// END OF LOGIN STYLING 
