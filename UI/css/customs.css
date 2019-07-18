@@ -4,7 +4,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.btn {
+button {
   width: 111px;
   height: 32px;
   background: #303F9F;
@@ -21,19 +21,26 @@ body {
   outline: none;
 }
 
-.btn:focus {
+button button:focus {
   outline: none;
 }
 
 .form {
   position: relative;
-  width: 40%;
+  width: 50%;
   margin: 30px auto;
   text-align: center;
 }
 
 .form h2 {
   color: #303F9F;
+  font-size: 20px;
+}
+
+.form .firstLastNames {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .form .formBox {
@@ -47,6 +54,57 @@ body {
 
 .form .signupLink {
   padding-top: 20px;
+}
+
+.form .firstLastNames {
+  margin: 5px auto;
+  width: 60%;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form .firstLastNames .signupInput {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form .firstLastNames .signupInput input {
+  width: 100%;
+}
+
+.form .firstLastNames .right {
+  padding-left: 10px;
+}
+
+.form .firstLastNames label {
+  text-align: initial;
+  padding-bottom: 5px;
+  color: gray;
+}
+
+.form .firstLastNames input {
+  height: 50px;
+  border: none;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  font-size: 20px;
+}
+
+.form .firstLastNames input:focus {
+  border: 1px solid #303F9F;
+  outline: none;
+}
+
+.form .firstLastNames a {
+  color: #303F9F;
 }
 
 .form .inputArea {
@@ -191,6 +249,18 @@ body {
     width: 60%;
     font-size: 15px;
   }
+  .form .firstLastNames {
+    display: block;
+    width: 60%;
+    font-size: 15px;
+  }
+  .form .firstLastNames input {
+    height: 35px;
+    font-size: 16px;
+  }
+  .form .firstLastNames .right {
+    padding-left: 0px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -204,6 +274,18 @@ body {
   .form .inputArea input {
     height: 30px;
     font-size: 15px;
+  }
+  .form .firstLastNames {
+    display: block;
+    width: 80%;
+    font-size: 15px;
+  }
+  .form .firstLastNames input {
+    height: 30px;
+    font-size: 15px;
+  }
+  .form .firstLastNames .right {
+    padding-left: 0px;
   }
   .form .option {
     width: 80%;
