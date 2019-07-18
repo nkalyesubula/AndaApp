@@ -36,15 +36,156 @@
   background: #e5e5e5;
 }
 
-img {
-  width: 40px;
-  height: 40px;
-}
-.profile {
-  height: 30px;
+.blog-content {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-grow: 1;
+  background: #e5e5e5;
 }
 
-.brand-logo {
+.button {
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  float: right;
+  border-radius: 40px;
+  background: #fff;
+  border: 2px solid #3399cc;
+  color: #3399cc;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.button:hover {
+  color: white;
+  background: #3399cc;
+}
+
+.shadow-effect {
+  padding: 1.5rem 2rem;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.form-select {
+  outline: none;
+  height: 4rem;
+  width: 30%;
+  margin: 2rem 0rem;
+}
+
+.form-input {
+  border-width: 0px;
+  border: none;
+  font-size: 30px;
+  font-weight: bold;
+  outline: none;
+  height: 5rem;
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+.search-input {
+  border: none;
+  font-size: 15px;
+  outline: none;
+  height: 5rem;
+  width: 100%;
+  -webkit-appearance: none;
+  margin-left: 15px;
+}
+
+.user-info {
+  display: inline-block;
+  margin: 2rem 0rem;
+}
+.user-info > img {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  margin-top: 3px;
+}
+.user-info > span {
+  float: left;
+  padding: 2px 0px;
+}
+.user-info > span > p {
+  margin: 2px 0px;
+}
+.sidebar-menu {
+  display: block;
+}
+.sidebar-menu > ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+.sidebar-menu > ul > li > a > * {
+  display: inline-block;
+}
+.sidebar-menu > ul > li {
+  padding-top: 2rem;
+}
+.sidebar-menu > ul > li > a > img {
+  width: 30px;
+  height: 30px;
+}
+.dashboard {
+  display: block;
+}
+.g {
+  width: 70%;
+  margin: 1.5rem;
+}
+.h {
+  width: 30%;
+  margin: 1.5rem;
+}
+.latest-blogs {
+  margin-top: 1.5rem;
+}
+
+.card {
+  padding: 1.5rem;
+}
+.card-header .title {
+  font-size: 20px;
+  font-family: Poppins;
+  letter-spacing: 0.01em;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.card-header .sub-title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+}
+.card-content {
+  font-style: normal;
+}
+button {
+  background: #303f9f;
+  border-radius: 4px;
+  color: white;
+}
+.readmore-btn {
+  text-align: center;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.follower-pic {
   display: flex; /*  so that items can be aligned by it side by side */
   align-items: center;
   font-size: 1.25em;
@@ -52,6 +193,15 @@ img {
   text-decoration: none;
 }
 
-.brand-logo-name {
+.follow-name {
   margin-left: 1rem;
+}
+
+.home-page-circle-1 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ff5146;
+  box-sizing: border-box;
 }
