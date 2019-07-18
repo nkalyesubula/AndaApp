@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .toolbar {
   display: flex;
   align-items: center;
@@ -44,6 +45,63 @@
   background: #e5e5e5;
 }
 
+=======
+/* View all blog posts css part*/
+.toolbar .site-icon{
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    margin-left: 1200px;
+
+  }
+  .myButton {
+    text-decoration: none;
+    color:#ffffff;
+    text-align: right;
+    border-radius:4px;
+    background: #ffffff;
+    padding-left: 10px;
+	  padding-right: 10px; 
+  }
+  .myButton a{
+    text-decoration: none;
+    color: white;
+    background: blue;
+    border-radius:4px;
+    padding:6px;
+    font-size: 13px;
+    text-align: center;
+  }
+  .share{
+    text-decoration: none;
+    color: white;
+    background:#BDBDBD;
+    border-radius:4px;
+    padding:6px;
+    font-size: 13px;
+    text-align: center;
+  }
+  .author{
+    text-align:left;
+    color:#BDBDBD;
+  }
+  a{
+    text-decoration: none;
+  }
+  .post-time img{
+   width:35px;
+   height: 25px;
+   border-radius:30px;
+
+ }
+ #titles{
+  text-decoration: underline
+ }
+ #icons{
+   padding:10px;
+ }
+>>>>>>> 78ded698be1ccff8d856f535243140c56a62de1f
 .button {
   outline: none;
   height: 40px;

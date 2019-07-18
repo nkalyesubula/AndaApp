@@ -1,4 +1,5 @@
 .layout {
+<<<<<<< HEAD
   @include display-flex;
   @include flex-flow(column);
   height: 100%;
@@ -21,3 +22,26 @@ body {
   overflow-y: scroll;
   width: 100%;
 }
+=======
+    @include display-flex;
+    @include flex-flow(column);
+    height: 100%;
+  }
+  
+  .main {
+    @include flex(1);
+    @include display-flex;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  .scroller {
+    overflow: hidden;
+    overflow-y: scroll;
+    width: 100%;
+  }
+>>>>>>> 78ded698be1ccff8d856f535243140c56a62de1f
