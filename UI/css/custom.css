@@ -1,3 +1,102 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-title {
+  display: flex;
+}
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.main-nav a:hover {
+  color: #adadad;
+}
+.container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-grow: 1;
+  background: #e5e5e5;
+}
+
+.blog-content {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-grow: 1;
+  background: #e5e5e5;
+}
+
+/* View all blog posts css part*/
+.toolbar .site-icon {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  margin-left: 1200px;
+}
+.myButton {
+  text-decoration: none;
+  color: #ffffff;
+  text-align: right;
+  border-radius: 4px;
+  background: #ffffff;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.myButton a {
+  text-decoration: none;
+  color: white;
+  background: blue;
+  border-radius: 4px;
+  padding: 6px;
+  font-size: 13px;
+  text-align: center;
+}
+.share {
+  text-decoration: none;
+  color: white;
+  background: #bdbdbd;
+  border-radius: 4px;
+  padding: 6px;
+  font-size: 13px;
+  text-align: center;
+}
+.author {
+  text-align: left;
+  color: #bdbdbd;
+}
+a {
+  text-decoration: none;
+}
+.post-time img {
+  width: 35px;
+  height: 25px;
+  border-radius: 30px;
+}
+#titles {
+  text-decoration: underline;
+}
+#icons {
+  padding: 10px;
+}
 .button {
   outline: none;
   height: 40px;
@@ -42,6 +141,16 @@
   height: 5rem;
   width: 100%;
   -webkit-appearance: none;
+}
+
+.search-input {
+  border: none;
+  font-size: 15px;
+  outline: none;
+  height: 5rem;
+  width: 100%;
+  -webkit-appearance: none;
+  margin-left: 15px;
 }
 
 .user-info {
@@ -107,4 +216,69 @@
   .sidebar-menu {
     display: block !important;
   }
+.g {
+  width: 70%;
+  margin: 1.5rem;
+}
+.h {
+  width: 30%;
+  margin: 1.5rem;
+}
+.latest-blogs {
+  margin-top: 1.5rem;
+}
+
+.card {
+  padding: 1.5rem;
+}
+.card-header .title {
+  font-size: 20px;
+  font-family: Poppins;
+  letter-spacing: 0.01em;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.card-header .sub-title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+}
+.card-content {
+  font-style: normal;
+}
+button {
+  background: #303f9f;
+  border-radius: 4px;
+  color: white;
+}
+.readmore-btn {
+  text-align: center;
+}
+.footer1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.follower-pic {
+  display: flex; /*  so that items can be aligned by it side by side */
+  align-items: center;
+  font-size: 1.25em;
+  color: inherit;
+  text-decoration: none;
+}
+
+.follow-name {
+  margin-left: 1rem;
+}
+
+.home-page-circle-1 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ff5146;
+  box-sizing: border-box;
 }
