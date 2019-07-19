@@ -1,0 +1,343 @@
+.toolbar a {
+    color: #FFFFFF;
+    float: right;
+    margin-right: 20%;
+    font-size: 80%
+}
+
+.toolbar i {
+    float: right;
+    font-size: 200%;
+}
+
+.toolbar div {
+    position: absolute;
+    right: 2%;
+    width: 20%
+}
+
+.post-container {
+    position: absolute;
+    width: 58.47%;
+    height: 85vh;
+    /* min-height: 66.1%; */
+    left: 19.4%;
+    top: 16.99%;
+    
+    background: #FFFFFF;
+    /* margin-bottom: 17%; */
+}
+
+.author-avator-container {
+    position: absolute;
+    /* left: 20.45%; */
+    /* right: 72.51%; */
+    width: 17vh;
+    height: 17vh;
+    /* top: 15%; */
+    /* bottom: 68.67%; */
+    padding-top: 1.5%;
+    text-align: center;
+    
+    /* background: url(image.png); */
+    z-index: 1;
+}
+
+.auth-details {
+    position: absolute;
+    left: 90%;
+    top: 20%;
+    display: inline-block;
+    font-size: .8;
+    text-align: left;
+    /* width: 100% */
+    width: 200%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1;
+    /* or 20px */
+    text-decoration-line: underline;
+    
+    color: #BDBDBD;
+}
+
+.auth-details p {
+    margin: 1.5% 0%;
+}
+
+.arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: solid 10px grey;
+    border-left: solid 5px white;
+    border-right: solid 5px white;
+    width: 0%;
+    height: 0%;
+}
+
+.post-title {
+    position: relative;
+    /* width: 78.7%; */
+    /* width: 90%; */
+    /* height: 9.7%; */
+    /* height: max-content; */
+    /* left: 5%; */
+    /* left: 5.82%; */
+    top: 11.95%;
+    /* top: 20%; */
+    /* padding-bottom: 2%; */
+    /* margin-bottom: 1px; */
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 200%;
+    line-height: 1.5;
+    text-decoration-line: underline;
+    
+    color: #333333;
+
+    /* text-align: center; */
+    padding: 0%;
+    border: solid red;
+    display: inline-block;
+}
+
+.post-subtitle {
+    position: absolute;
+    /* max-width: 55.5%; */
+    /* max-width: 86.2%; */
+    /* height: 14.12%; */
+    /* left: 6.9%; */
+    top: 25.8%;
+    /* top: 10%; */
+    /* height: fit-content; */
+    /* margin-bottom: 1px; */
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    text-decoration-line: underline;
+    
+    color: #333333;
+    border: solid green;
+    top: 14vh;
+    /* display: block; */
+    /* width: 100%; */
+    
+}
+
+.post-body {
+    position: absolute;
+    /* width: 86.2%; */
+    /* width: 98%; */
+    /* height: 33.9%; */
+    /* left: 6.9%; */
+    left: 1%;
+    top: 47.1%;
+    bottom: 5%;
+    margin-top: 2.2%;
+    float: left;
+    /* bottom: 5%; */
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80%;
+    /* line-height: 18px; */
+    /* text-decoration-line: underline; */
+    text-align: justify;
+    
+    color: #333333;
+    margin-bottom: 1%;
+}
+
+.post-summary {
+    position: absolute;
+    width: 32.7%;
+    /* height: 33.9%; */
+    /* left: 59.9%; */
+    right: 0%;
+    margin-top: 2.2%;
+    margin-left: 2.2%;
+    top: 49.2%;
+    float: right;
+    padding: 1.5%;
+    
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 120%;
+    line-height: 1.5;
+    text-decoration-line: underline;
+    
+    color: #333333;
+    /* border: solid 1px red */
+    
+}
+
+.icons {
+    position: fixed;
+    bottom: 1%;
+    right: 5.5%;
+    width: 100%;
+    text-align: right;
+    align-content: justify;
+    margin-right: 21%;
+}
+
+.share-icon {
+    transform: rotateY(180deg);
+    width: 50px;
+    height: 20px;
+}
+
+.share {
+    position: relative;
+    /* left: 0%; */
+    right: 0%;
+    top: 0%;
+    /* bottom: 0%; */
+    /* display: inline; */
+    width: auto;
+    
+    background: #303F9F;
+    border-radius: 4px;
+    padding: .5% 1%;
+    color: white
+}
+
+.share, .like, .dislike, .comment-icon {
+    margin-left: 2%
+}
+
+@media (max-width: 620px) {
+    .post-body {
+        top: 50%;
+    }
+}
+
+@media (max-width: 520px) {
+    .post-summary {
+        display: none;
+    }
+    .post-title h1{
+        font-size: 150%;
+        line-height: 120%
+    }
+    .post-subtitle {
+        top: 16%;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .post-body {
+        top: 33%;
+    }
+    .post-container {
+        width: 80%;
+        left: 10%;
+    }
+}
+
+@media (max-width: 240px) {
+    .post-subtitle {
+        top: 20%;
+    }
+    .post-body {
+        top: 50%;
+    }
+    .post-title h1{
+        line-height: 26px;
+        font-size: 20px
+    }
+}
+.button {
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  float: right;
+  border-radius: 40px;
+  background: #fff;
+  border: 2px solid #3399cc;
+  color: #3399cc;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.button:hover {
+  color: white;
+  background: #3399cc;
+}
+
+.shadow-effect {
+  padding: 1.5rem 2rem;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.form-select {
+  outline: none;
+  height: 4rem;
+  width: 30%;
+  margin: 2rem 0rem;
+}
+
+.form-input {
+  border-width: 0px;
+  border: none;
+  font-size: 30px;
+  font-weight: bold;
+  outline: none;
+  height: 5rem;
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+.user-info {
+  display: inline-block;
+  margin: 2rem 0rem;
+}
+.user-info > img {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  margin-top: 3px;
+}
+.user-info > span {
+  float: left;
+  padding: 2px 0px;
+}
+.user-info > span > p {
+  margin: 2px 0px;
+}
+.sidebar-menu {
+  display: block;
+}
+.sidebar-menu > ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+.sidebar-menu > ul > li > a > * {
+  display: inline-block;
+}
+.sidebar-menu > ul > li {
+  padding-top: 2rem;
+}
+.sidebar-menu > ul > li > a > img {
+  width: 30px;
+  height: 30px;
+}
+.dashboard {
+  display: block;
+}
