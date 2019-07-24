@@ -8,7 +8,7 @@ const restrictions = () => {
   return validationOptions;
 };
 
-class UserValidationsClass {
+class UserValidations {
   static signupValidation(userSchema) {
     const Schema = Joi.object().keys({
       firstname: Joi.string()
@@ -36,6 +36,16 @@ class UserValidationsClass {
     const scanErrors = restrictions();
     return Joi.validate(userSchema, Schema, scanErrors);
   }
+  static signinValidation(userSchema) {
+    const loggerSchema = {
+      email: Joi.string()
+      .email({ minDomainAtoms: 2 })
+      .required()
+      .trim(),
+    password: Joi.string().required(),
+    };
+    return Joi.validate(userSchema, loggerSchema, restrictions());
+  }
 }
 
-export default UserValidationsClass;
+export default UserValidations;

@@ -24,8 +24,8 @@ class SignupClass {
       password: hashedPassword
     };
 
-    User.findAll({ where: { email: userSchema.email } }).then((email) =>{
-      if (email.length !== 0) {
+    User.findOne({ where: { email: userSchema.email } }).then((email) =>{
+      if (email) {
         return res
           .status(409)
           .json({
