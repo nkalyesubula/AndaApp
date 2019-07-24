@@ -12,5 +12,7 @@ module.exports = {
     commonjs: true,
     node: true,
     mocha: true
-  }
+  },
+  parser: "babel-eslint",
+  parserOptions: { sourceType: "module", allowImportExportEverywhere: true }
 };
