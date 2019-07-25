@@ -92,7 +92,7 @@ class GeneralService {
     this.colName=colName,
     this.colValue=colValue
     try {
-      return  await database.table.findAll({ where: sequelize.where(sequelize.fn( sequelize.col(colName)), colValue) });
+      return  await database.table.findAll({ where: {colName:String(colValue)} });
       
     } catch (error) {
       throw error;
