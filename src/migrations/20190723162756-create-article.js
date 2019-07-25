@@ -22,7 +22,7 @@ module.exports = {
       },
       status: {
         type: Sequelize.ENUM("Flagged", "NotFlagged"),
-        defaultValue: "Flagged"
+        defaultValue: "NotFlagged"
       },
       userId: {
         type: Sequelize.INTEGER,
