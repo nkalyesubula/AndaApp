@@ -30,7 +30,10 @@ class UserValidations {
       password: Joi.string().required(),
       retypepassword: Joi.string()
         .required()
-        .valid(Joi.ref("password")).options({language:{any: {allowOnly: 'Passwords do not match'}}}),
+        .valid(Joi.ref("password"))
+        .options({
+          language: { any: { allowOnly: "Passwords do not match" } }
+        }),
       role: Joi.string().valid("admin", "moderator", "ordinary")
     });
     const scanErrors = restrictions();
@@ -39,10 +42,10 @@ class UserValidations {
   static signinValidation(userSchema) {
     const loggerSchema = {
       email: Joi.string()
-      .email({ minDomainAtoms: 2 })
-      .required()
-      .trim(),
-    password: Joi.string().required(),
+        .email({ minDomainAtoms: 2 })
+        .required()
+        .trim(),
+      password: Joi.string().required()
     };
     return Joi.validate(userSchema, loggerSchema, restrictions());
   }
