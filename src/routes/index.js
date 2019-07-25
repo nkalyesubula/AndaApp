@@ -1,10 +1,3 @@
-import express from 'express';
-import usersRoutes from '../routes/users';
-
-export default (app) => {
-    app.use(usersRoutes);
-};
-
 import "@babel/polyfill";
 const express=require('express');
 const bodyParser =require('body-parser');
