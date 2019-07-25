@@ -19,7 +19,7 @@ module.exports = {
     host: "127.0.0.1",
     dialect: "postgres",
     operatorsAliases: false,
-    port: 5432
+    port: 5433
   },
   production: {
     username: "root",

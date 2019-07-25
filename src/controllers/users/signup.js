@@ -1,21 +1,12 @@
 import userModel from "../../models/index";
 import dotenv from "dotenv";
 import Helper from "../../helpers/bcryptHash";
-import validation from "../../helpers/validations/usersValidations";
 
 dotenv.config();
 
 const User = userModel.User;
 class SignupClass {
   static signup(req, res) {
-    // Validation
-    const { error } = validation.signupValidation(req.body);
-    if (error) {
-      const err = [];
-      error.details.map(e => err.push({ message: e.message }));
-      return res.status(403).json({ status: 403, err });
-    }
-
     const hashedPassword = Helper.hashPassword(req.body.password);
     const userSchema = {
       firstname: req.body.firstname,
