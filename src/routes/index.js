@@ -4,5 +4,5 @@ import commentRoutes from "../routes/comment";
 import articlesRoutes from "../routes/articles";
 
 export default app => {
-  app.use(usersRoutes, usersRoutes, commentRoutes, articlesRoutes);
+  app.use(usersRoutes, commentRoutes, articlesRoutes);
 };

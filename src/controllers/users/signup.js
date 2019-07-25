@@ -12,7 +12,8 @@ class SignupClass {
       firstname: req.body.firstname,
       lastname: req.body.lastname,
       email: req.body.email.toLowerCase(),
-      password: hashedPassword
+      password: hashedPassword,
+      role: 'ordinary'
     };
 
     User.findOne({ where: { email: userSchema.email } }).then((email) =>{
@@ -26,8 +27,8 @@ class SignupClass {
       } else {
         User.create(userSchema)
           .then(user => {
-            const { id, firstname, lastname, email } = user;
-            const payload = { id, firstname, lastname, email };
+            const { email } = user;
+            const payload = { email };
             const token = Helper.generateToken(payload, process.env.SECRET_KEY);
             return res.status(201).json({
               status: 201,
@@ -36,7 +37,8 @@ class SignupClass {
                 id: user.id,
                 firstname: user.firstname,
                 lastname: user.lastname,
-                email: user.email
+                email: user.email,
+                role: user.role,
               }
             });
           })

@@ -23,7 +23,6 @@ module.exports = {
       },
       role: {
         type: Sequelize.STRING,
-        default: "ordinary"
       },
       createdAt: {
         allowNull: false,

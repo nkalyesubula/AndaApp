@@ -7,12 +7,14 @@ export const restrictions = () => {
   };
   return validationOptions;
 };
+
+// constaints
  export const schema = {
     signupSchema: Joi.object().keys({
     firstname: Joi.string().regex(/^[a-zA-Z]+$/).min(3).max(50).required().trim(),
     lastname: Joi.string().regex(/^[a-zA-Z]+$/).min(3).max(50).required().trim(),
     email: Joi.string().email({ minDomainAtoms: 2 }).required().trim(),
-    password: Joi.string().required(),
+    password: Joi.string().regex(/^(?:(?=.*[a-z])(?:(?=.*[A-Z])(?=.*[\d\W])|(?=.*\W)(?=.*\d))|(?=.*\W)(?=.*[A-Z])(?=.*\d)).{8,}$/).required(),
     retypepassword: Joi.string().required().valid(Joi.ref("password")).options({language:{any: {allowOnly: 'Passwords do not match'}}}),
     role: Joi.string().valid("admin", "moderator", "ordinary")
   }),

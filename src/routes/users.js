@@ -7,7 +7,7 @@ import validate from '../middleware/validationMiddleware';
 
 const router = express.Router();
 
-router.post('/api/signup',validate(schema.signupSchema),signupController.signup);
+router.post('/api/signup',[validate(schema.signupSchema)],signupController.signup);
 router.post('/api/login', validate(schema.loggerSchema), login);
 
 
