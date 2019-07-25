@@ -1,14 +1,20 @@
-import UserService from '../services/user';
+import Service from '../services/general';
 import Util from '../Middlewares/util';
 
- 
-   const util = new Util();
+const util = new Util();
 
 class AdminController {
+  constructor() {
+    this.userTable = 'User';
+    this.postTable = 'Post';
+    this.commentTable= 'Comment';
+    this.categoryTable= 'Category';
+
+  }
 
   static async getAllUsers(req, res) {
     try {
-      const allUsers = await UserService.getAllUsers();
+      const allUsers = await Service.getAll(userTable);
       if (allUsers.length > 0) {
         util.setSuccess(200, 'Users retrieved', allUsers);
       } else {
@@ -22,10 +28,11 @@ class AdminController {
   }
 
   static async createModulator(req, res) {
-   req.body.role="modulator"
+    console.log(this.route)
+   req.body.role="Modulator"
     const newUser = req.body;
     try {
-      const createdUser = await UserService.addUser(newUser);
+      const createdUser = await Service.create(userTable,newUser);
       util.setSuccess(201, 'Modulator Added!', createdUser);
       return util.send(res);
     } catch (error) {
@@ -33,6 +40,18 @@ class AdminController {
       return util.send(res);
     }
   }
+  static async createAdmin(req, res) {
+    req.body.role="Admin"
+     const newUser = req.body;
+     try {
+       const createdUser = await Service.create(userTable,newUser);
+       util.setSuccess(201, 'Admin Added!', createdUser);
+       return util.send(res);
+     } catch (error) {
+       util.setError(400, error.message);
+       return util.send(res);
+     }
+   }
 
   static async updatedUser(req, res) {
     const alteredUser = req.body;
@@ -42,7 +61,7 @@ class AdminController {
       return util.send(res);
     }
     try {
-      const updateUser = await UserService.updateUser(id, alteredUser);
+      const updateUser = await Service.update(userTable,'id',id, alteredUser);
       if (!updateUser) {
         util.setError(404, `Cannot find User with the id: ${id}`);
       } else {
@@ -64,7 +83,7 @@ class AdminController {
     }
 
     try {
-      const theUser = await UserService.getAUser(id);
+      const theUser = await Service.findOneById(userTable,'id',id);
 
       if (!theUser) {
         util.setError(404, `Cannot find User with the id ${id}`);
@@ -87,7 +106,7 @@ class AdminController {
     }
 
     try {
-      const UserToDelete = await UserService.deleteUser(id);
+      const UserToDelete = await Service.deleteOne(userTable,'id',id);
 
       if (UserToDelete) {
         util.setSuccess(200, 'User deleted');

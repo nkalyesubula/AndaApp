@@ -1,14 +1,14 @@
 const jwt = require('jsonwebtoken');
+import Util from '../Middlewares/util';
 import env from "dotenv"; 
+const util = new Util();
 env.config()
 
 let validateToken = (req, res, next) => {
   let token = req.headers['x-access-token'] || req.headers['authorization']; 
     if(!token){
-      return res.status(401).send({
-        status:401,
-        error:"Unauthorized access"
-      })
+        util.setError(401, 'Unauthorized access');
+        return util.send(res);
     }  
   if (token.startsWith('Bearer ')) {
   
@@ -18,12 +18,8 @@ let validateToken = (req, res, next) => {
     if (token) {
       jwt.verify(token, process.env.secret_key, (err, decode) => {
         if (err) {
-          return res.send({
-            status:401,
-            success: false,
-            message: 'Token is not valid'
-          });
-      
+             util.setError(401, 'Token is not valid');
+             return util.send(res);
         } else {
           console.log(decode)
           req.auth = decode;
@@ -31,10 +27,8 @@ let validateToken = (req, res, next) => {
         }
       });
     } else {
-      return res.send({
-        success: false,
-        message: 'Auth token is not supplied'
-      });
+        util.setSuccess(400, 'Auth token is not supplied');
+        return util.send(res);
     }
   };
   export default validateToken;

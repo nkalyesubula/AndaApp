@@ -71,9 +71,8 @@ class UserService {
     }
   }
   static async getUserByCol(col) {
-      let column = col.toString()
     try {
-      const UserToDelete = await database.User.findAll({ where: { this: String(col) } });
+      const UserToDelete = await database.$User.findAll({ where: { id: String(col) } });
 
       if (UserToDelete) {
         const deletedUser = await database.User.destroy({

@@ -5,17 +5,14 @@ env.config()
 
 class Helper  {
   
-  hashPassword(password) {
-    console.log(password)    
+  hashPassword(password) {  
     return bcrypt.hashSync(password, bcrypt.genSaltSync(8))
   }
-  
   comparePassword(hashPassword, password) {
     
     return bcrypt.compareSync(password, hashPassword);
   }
-  
-  
+
  generateToken(userName,role) {
     const token = jwt.sign(
       { userName:userName,role:role },
@@ -34,5 +31,4 @@ class Helper  {
     
   }
 }
-
 export default new Helper();
