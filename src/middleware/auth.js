@@ -1,23 +1,40 @@
-import dotenv from 'dotenv';
-import jwt from 'jsonwebtoken';
+const jwt = require('jsonwebtoken');
+import env from "dotenv"; 
+env.config()
 
-dotenv.config();
+let validateToken = (req, res, next) => {
+  let token = req.headers['x-access-token'] || req.headers['authorization']; 
+    if(!token){
+      return res.status(401).send({
+        status:401,
+        error:"Unauthorized access"
+      })
+    }  
+  if (token.startsWith('Bearer ')) {
+  
+      token = token.slice(7, token.length);
+    }
 
-const authentication = (req, res, next) =>{
-    const token = req.headers.authorization;
-    if (!token || token === ' ') {return res.status(401).json({
-        message: 'Sorry, you are not authorized'
-    })}
-        jwt.verify(token, process.env.SECRET_KEY, (err, decoded)=>{
-            if (err){
-                return res.status(401).json({
-                    err
-                })
-            } else{
-                req.user = decoded;
-                next();
-            };
-        });
-};
-
-export default authantication;
+    if (token) {
+      jwt.verify(token, process.env.secret_key, (err, decode) => {
+        if (err) {
+          return res.send({
+            status:401,
+            success: false,
+            message: 'Token is not valid'
+          });
+      
+        } else {
+          console.log(decode)
+          req.auth = decode;
+          next();
+        }
+      });
+    } else {
+      return res.send({
+        success: false,
+        message: 'Auth token is not supplied'
+      });
+    }
+  };
+  export default validateToken;
