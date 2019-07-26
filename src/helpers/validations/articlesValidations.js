@@ -8,8 +8,8 @@ const restrictions = () => {
   return validationOptions;
 };
 
-class UserValidations {
-  static signupValidation(userSchema) {
+class ArticleValidation {
+  static createArticleValidation(articleUserData) {
     const Schema = Joi.object().keys({
       firstname: Joi.string()
         .regex(/^[a-zA-Z]+$/)
@@ -37,7 +37,7 @@ class UserValidations {
       role: Joi.string().valid("admin", "moderator", "ordinary")
     });
     const scanErrors = restrictions();
-    return Joi.validate(userSchema, Schema, scanErrors);
+    return Joi.validate(articleUserData, Schema, scanErrors);
   }
   static signinValidation(userSchema) {
     const loggerSchema = {
