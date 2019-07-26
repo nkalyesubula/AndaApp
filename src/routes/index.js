@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import express from "express";
 import usersRoutes from "../routes/users";
 import articlesRoutes from "../routes/articles";
@@ -6,6 +7,8 @@ export default app => {
   app.use(articlesRoutes);
 };
 
+=======
+>>>>>>> 02fe618494bc3fc079934306585d05a7e3b6a623
 import "@babel/polyfill";
 const express=require('express');
 const bodyParser =require('body-parser');

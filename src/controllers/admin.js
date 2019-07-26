@@ -9,7 +9,7 @@ const service = new service();
 class AdminController {
   constructor() {
     this.userTable = 'User';
-    this.postTable = 'Article';
+    this.postTable = 'Post';
     this.commentTable= 'Comment';
     this.categoryTable= 'Category';
 
