@@ -9,5 +9,10 @@ router.post(
   validate(schema.articleSchema),
   Article.createArticle
 );
+router.patch(
+  "/api/article/:id",
+  validate(schema.articleSchema),
+  Article.updateArticle
+);
 
 export default router;
