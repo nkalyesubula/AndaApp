@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       status: {
         type: DataTypes.ENUM("Flagged", "NotFlagged"),
-        defaultValue: "Flagged"
+        defaultValue: "NotFlagged"
       }
     },
     {}
