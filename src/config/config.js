@@ -10,10 +10,11 @@ module.exports = {
     database: DB_NAME,
     host: "127.0.0.1",
     dialect: "postgres",
+    port:5432
   },
   test: {
     username: DB_USER,
-    password:DB_PASS,
+    password: DB_PASS,
     database: "anda_test",
     host: "127.0.0.1",
     dialect: "postgres",
