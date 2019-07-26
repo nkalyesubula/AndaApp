@@ -28,6 +28,32 @@ class Article {
       return util.send(res);
     }
   }
+  static async updateArticle(req, res) {
+    const { id } = req.params;
+    const { title, categoryId, body, summary, userId } = req.body;
+    const articleSchema = {
+      title,
+      categoryId,
+      body,
+      summary,
+      userId
+    };
+    try {
+      const updatedArticle = await ArticleService.updateArticle(
+        id,
+        articleSchema
+      );
+      const setSuccess = util.setSuccess(
+        200,
+        "Article successfully updated",
+        updatedArticle
+      );
+      return util.send(res);
+    } catch (error) {
+      const setError = util.setError(400, error.message);
+      return util.send(res);
+    }
+  }
 }
 
 export default Article;
