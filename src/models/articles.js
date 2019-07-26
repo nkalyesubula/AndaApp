@@ -38,10 +38,12 @@ module.exports = (sequelize, DataTypes) => {
   );
   Article.associate = function(models) {
     Article.belongsTo(models.Category, {
-      foreignKey: "categoryId"
+      foreignKey: "categoryId",
+      as: "cat_article"
     });
     Article.belongsTo(models.User, {
-      foreignKey: "userId"
+      foreignKey: "userId",
+      as: "user_article"
     });
   };
   return Article;

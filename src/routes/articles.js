@@ -10,7 +10,7 @@ router.post(
   validate(schema.articleSchema),
   Article.createArticle
 );
-
 router.get("/api/article/:articleId", singleArticle.detail);
-
+router.get('/api/articles',Article.getallArticle);
+router.delete('/api/articles/:id',Article.deleteBlog);
 export default router;
