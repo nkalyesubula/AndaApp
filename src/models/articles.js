@@ -36,13 +36,13 @@ module.exports = (sequelize, DataTypes) => {
     },
     {}
   );
-  /*Article.associate = function(models) {
+  Article.associate = function(models) {
     Article.belongsTo(models.Category, {
       foreignKey: "CategoryId"
     });
     Article.belongsTo(models.User, {
       foreignKey: "userId"
     });
-  };*/
+  };
   return Article;
 };
