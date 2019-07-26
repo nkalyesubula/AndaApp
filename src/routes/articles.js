@@ -9,10 +9,6 @@ router.post(
   validate(schema.articleSchema),
   Article.createArticle
 );
-router.patch(
-  "/api/article/:id",
-  validate(schema.articleSchema),
-  Article.updateArticle
-);
-
+router.get('/api/articles',Article.getallArticle);
+router.delete('/api/articles/:id',Article.deleteBlog);
 export default router;
