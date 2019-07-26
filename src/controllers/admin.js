@@ -1,22 +1,16 @@
 import Service from '../services/service';
-import Util from '../Middlewares/util';
-import helper from '../Middlewares/helper';
-
+import Util from '../middleware/util';
+import helper from '../middleware/helper';
 const util = new Util();
-const helper = new helper();
-const service = new service();
 
 class AdminController {
   constructor() {
-    this.userTable = 'User';
-    this.postTable = 'Post';
-    this.commentTable= 'Comment';
-    this.categoryTable= 'Category';
-
   }
   static async login(req, res) {
+    console.log("welcome to login routes mr admin")
     try {
-      const theUser = await Service.findOne(userTable,'email',req.body.email);
+      console.log(req.body);
+      const theUser = await Service.findOne('User','email',req.body.email);
 
       if (!theUser) {
         util.setError(404, `Cannot find User with the id ${req.body.email}`);
@@ -31,13 +25,14 @@ class AdminController {
       }
       return util.send(res);
     } catch (error) {
+      console.log(error)
       util.setError(404, error);
       return util.send(res);
     }
   }
   static async reset(req, res) {
     try {
-      const theUser = await Service.findOne(userTable,'email',req.body.email);
+      const theUser = await Service.findOne('User','email',req.body.email);
 
       if (!theUser) {
         util.setError(404, `Cannot find User with the id ${req.body.email}`);
@@ -55,7 +50,7 @@ class AdminController {
   }
   static async getAllUsers(req, res) {
     try {
-      const allUsers = await Service.getAll(userTable);
+      const allUsers = await Service.getAll('User');
       if (allUsers.length > 0) {
         util.setSuccess(200, 'Users retrieved', allUsers);
       } else {
@@ -69,11 +64,11 @@ class AdminController {
   }
 
   static async createModulator(req, res) {
-    console.log(this.route)
-   req.body.role="Modulator"
-    const newUser = req.body;
+    
     try {
-      const createdUser = await Service.create(userTable,newUser);
+      req.body.role="Modulator"
+     const newUser = req.body;
+      const createdUser = await Service.create('User',newUser);
       util.setSuccess(201, 'Modulator Added!', createdUser);
       return util.send(res);
     } catch (error) {
@@ -85,7 +80,7 @@ class AdminController {
     req.body.role="Admin"
      const newUser = req.body;
      try {
-       const createdUser = await Service.create(userTable,newUser);
+       const createdUser = await Service.create('User',newUser);
        util.setSuccess(201, 'Admin Added!', createdUser);
        return util.send(res);
      } catch (error) {
@@ -94,7 +89,7 @@ class AdminController {
      }
    }
 
-  static async updatedUser(req, res) {
+  static async updateUser(req, res) {
     const alteredUser = req.body;
     const { id } = req.params;
     if (!Number(id)) {
@@ -102,7 +97,7 @@ class AdminController {
       return util.send(res);
     }
     try {
-      const updateUser = await Service.update(userTable,'id',id, alteredUser);
+      const updateUser = await Service.update('User','id',id, alteredUser);
       if (!updateUser) {
         util.setError(404, `Cannot find User with the id: ${id}`);
       } else {
@@ -124,7 +119,7 @@ class AdminController {
     }
 
     try {
-      const theUser = await Service.findOneById(userTable,'id',id);
+      const theUser = await Service.findOneById('User','id',id);
 
       if (!theUser) {
         util.setError(404, `Cannot find User with the id ${id}`);
@@ -147,7 +142,7 @@ class AdminController {
     }
 
     try {
-      const UserToDelete = await Service.deleteOne(userTable,'id',id);
+      const UserToDelete = await Service.deleteOne('User','id',id);
 
       if (UserToDelete) {
         util.setSuccess(200, 'User deleted');
@@ -170,7 +165,7 @@ class AdminController {
     }
 
     try {
-      const PostToDelete = await Service.deleteOne(postTable,'id',id);
+      const PostToDelete = await Service.deleteOne('Articles','id',id);
 
       if (PostToDelete) {
         util.setSuccess(200, `Post with the id ${id} deleted successfully`);

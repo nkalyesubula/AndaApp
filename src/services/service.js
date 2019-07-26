@@ -1,4 +1,5 @@
-import database from '../src/models';
+import database from '../models';
+import sequelize from 'sequelize';
 
 class Service {
     constructor() {
@@ -15,12 +16,15 @@ class Service {
     }
   }
   static async findOne(table,colName,colValue) {
+    console.log('in a service')
       this.table=table,
       this.colName=colName,
       this.colValue=colValue
+      console.log(database.User);
     try {
-      return await database.table.findOne({
-        where: { colname: String(colName)}
+      return await database.User.findOne({
+        // where: sequelize.where(sequelize.fn('Values', sequelize.col(colName)), String(colValue))
+        where: { email: String(colValue)}
       });
     } catch (error) {
       throw error;
@@ -30,7 +34,7 @@ class Service {
   static async create(table,data) {
     this.table=table
     try {
-      return await database.table.create(data);
+      return await database.User.create(data);
     } catch (error) {
       throw error;
     }
@@ -44,7 +48,7 @@ class Service {
       const ToUpdate = await this.findOneById(table,colName,colValue, data);
 
       if (ToUpdate) {
-        await database.table.update(data, { where: { colName: Number(colValue) } });
+        await database.User.update(data, { where: { id: Number(colValue) } });
 
         return data;
       }

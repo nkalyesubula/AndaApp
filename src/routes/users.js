@@ -1,10 +1,10 @@
 import express from 'express';
-import signupController from '../controllers/users/signup';
+import signupController from '../controllers/admin';
 
 
 const router = express.Router();
 
-router.post('/api/signup', signupController.signup);
+router.post('/signup', signupController.signup);
 
 
 

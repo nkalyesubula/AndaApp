@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-import Util from '../Middlewares/util';
+import Util from './util';
 import env from "dotenv"; 
 const util = new Util();
 env.config()
@@ -16,7 +16,7 @@ let validateToken = (req, res, next) => {
     }
 
     if (token) {
-      jwt.verify(token, process.env.secret_key, (err, decode) => {
+      jwt.verify(token, process.env.SECRET_KEY, (err, decode) => {
         if (err) {
              util.setError(401, 'Token is not valid');
              return util.send(res);
