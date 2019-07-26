@@ -24,15 +24,14 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   Comment.associate = function(models) {
-    // associations can be defined here
-    Comment.belongsTo(models.article, {
-      as: "article",
+    Comment.belongsTo(models.Article, {
+      as: "Article",
       foreignKey: "id",
       onUpdate: "CASCADE",
       onDelete: "CASCADE"
     });
-    Comment.belongsTo(models.user, {
-      as: "user",
+    Comment.belongsTo(models.User, {
+      as: "User",
       foreignKey: "id",
       onUpdate: "CASCADE",
       onDelete: "CASCADE"

@@ -3,6 +3,6 @@ import CommentController from "../controllers/article/comment";
 
 const router = Router();
 
-router.post("/", CommentController.createComment);
+router.post("/api/comments", CommentController.createComment);
 
 export default router;

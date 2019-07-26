@@ -1,11 +1,13 @@
-const Joi = require("joi");
+import Joi from "joi";
 import database from "../../models";
 
 class CommentHelper {
   //validate comment
   static validateComment(postedData) {
     const schema = {
-      content: Joi.min(3).required(),
+      content: Joi.string()
+        .min(3)
+        .required(),
       user_id: Joi.number()
         .positive()
         .required(),

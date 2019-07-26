@@ -1,10 +1,12 @@
 import express from "express";
-import bodyparser from 'body-parser';
-import routes from './routes/index';
+import bodyparser from "body-parser";
+import routes from "./routes/index";
 
 const app = express();
 app.use(bodyparser.json());
-app.use(bodyparser.urlencoded({extended: false}));
+app.use(bodyparser.urlencoded({ extended: false }));
+
+routes(app);
 
 app.get("/", (req, res) => {
   return res.status(200).send("Welcome to AndaApp");
