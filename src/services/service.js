@@ -1,6 +1,6 @@
 import database from '../src/models';
 
-class GeneralService {
+class Service {
     constructor() {
         this.table = null;
         this.colName = null;
@@ -100,4 +100,4 @@ class GeneralService {
   }
 }
 
-export default GeneralService;
+export default Service;

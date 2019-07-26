@@ -6,7 +6,7 @@ env.config()
 class Helper  {
   
   hashPassword(password) {  
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(8))
+    return bcrypt.hashSync(password, bcrypt.genSaltSync(100))
   }
   comparePassword(hashPassword, password) {
     
