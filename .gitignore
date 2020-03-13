@@ -1,0 +1,6 @@
+.nyc_output/
+.env
+node_modules/
+package-lock.json
+.DS_Store 
+build/
